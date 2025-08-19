@@ -1,0 +1,53 @@
+Git:
+
+---A version control system (VCS).
+
+---Helps track changes in code, manage versions, and collaborate with others.
+
+---Works locally on your computer.
+
+GitHub:
+
+A cloud-based platform that hosts Git repositories.
+
+Provides collaboration features like pull requests, issues, project boards.
+
+Makes it easier to share code and work with teams.
+
+git installation and login:
+
+
+🔹 Install Git
+
+1.Go to the official site: https://git-scm.com/downloads
+
+2.Download Git for your OS (Windows/Mac/Linux).
+
+3.Run the installer → keep default settings → finish.
+
+4.verify installation:
+git --version(bash)
+
+🔹 Configure Git (first-time setup)
+
+After installing, you need to set your username and email:
+bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+🔹 GitHub/GitLab Login (Authentication)
+
+There are two ways:
+
+1. Using HTTPS (recommended with Personal Access Token)
+
+Go to your GitHub → Settings → Developer settings → Personal access tokens.
+
+Generate a token (with repo access).
+
+When you run git push for the first time, Git will ask for:
+
+Username → your GitHub username
+
+Password → paste the token
+
