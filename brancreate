@@ -1,0 +1,39 @@
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (main)
+$ git branch
+* main
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (main)
+$ git branch table
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (main)
+$ git branch
+* main
+  table
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (main)
+$ git switch table
+Switched to branch 'table'
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (table)
+$ git branch
+  main
+* table
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (table)
+$ git add .
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (table)
+$ git commit -m "new"
+On branch table
+nothing to commit, working tree clean
+
+nani@LAPTOP-GIKPDLK7 MINGW64 /e/git (table)
+$ git push origin table
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'table' on GitHub by visiting:
+remote:      https://github.com/Tharun123-Dev/github/pull/new/table
+remote:
+To https://github.com/Tharun123-Dev/github.git
+ * [new branch]      table -> table
