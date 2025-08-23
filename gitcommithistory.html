@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>A Git commit history is the record of all commits made in a Git repository, showing who made changes, when they were made, and what was changed. It helps in tracking the evolution of a project.
+ Viewing Commit History in Git
+
+You can see commit history using the following commands:
+--git log         ----shows commit id
+--git log all     ----this shows commit history of all branches
+
+--git checkout-- switch branches
+
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git init
+Initialized empty Git repository in C:/Users/nani/OneDrive/Desktop/new/.git/
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git add .
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git cimmit-m"version1"
+git: 'cimmit-mversion1' is not a git command. See 'git --help'.
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git commit -m "version1"
+[master (root-commit) 126188a] version1
+ 1 file changed, 11 insertions(+)
+ create mode 100644 versions.html
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git remote add origin "https://github.com/Tharun123-Dev/versionshistory.git"
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tharun123-Dev/versionshistory.git'
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (master)
+$ git branch -m main
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 374 bytes | 374.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Tharun123-Dev/versionshistory.git
+ * [new branch]      main -> main
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git add .
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git commit -m "version2"
+[main 66979e3] version2
+ 1 file changed, 1 insertion(+)
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Tharun123-Dev/versionshistory.git
+   126188a..66979e3  main -> main
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git add .
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git commit -m "version3"
+[main 6c7dbde] version3
+ 1 file changed, 1 insertion(+)
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Tharun123-Dev/versionshistory.git
+   66979e3..6c7dbde  main -> main
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git checkout
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git log
+commit 6c7dbdedd11fc2b8b0b56ab6a29f31eb0aa47f3c (HEAD -> main, origin/main)
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:55:52 2025 +0530
+
+    version3
+
+commit 66979e38daafe7bba70e9df7ea83a4bbef47cc12
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:54:55 2025 +0530
+
+    version2
+
+commit 126188abbe926721af4218987712cf7d6556931d
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:52:20 2025 +0530
+
+    version1
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git checkout (^C
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git checkout ( 66979e38daafe7bba70e9df7ea83a4bbef47cc12
+)
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `)'
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new (main)
+$ git checkout "66979e38daafe7bba70e9df7ea83a4bbef47cc12"
+Note: switching to '66979e38daafe7bba70e9df7ea83a4bbef47cc12'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 66979e3 version2
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new ((66979e3...))
+$ git log
+commit 66979e38daafe7bba70e9df7ea83a4bbef47cc12 (HEAD)
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:54:55 2025 +0530
+
+    version2
+
+commit 126188abbe926721af4218987712cf7d6556931d
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:52:20 2025 +0530
+
+    version1
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new ((66979e3...))
+$ git log all
+fatal: ambiguous argument 'all': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new ((66979e3...))
+$ git log --all
+commit 6c7dbdedd11fc2b8b0b56ab6a29f31eb0aa47f3c (origin/main, main)
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:55:52 2025 +0530
+
+    version3
+
+commit 66979e38daafe7bba70e9df7ea83a4bbef47cc12 (HEAD)
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:54:55 2025 +0530
+
+    version2
+
+commit 126188abbe926721af4218987712cf7d6556931d
+Author: Tharun123-Dev <anjali.tharun9949@gmail.com>
+Date:   Sat Aug 23 11:52:20 2025 +0530
+
+    version1
+
+nani@LAPTOP-GIKPDLK7 MINGW64 ~/OneDrive/Desktop/new ((66979e3...))
+$
+
+</p>
+</body>
+</html>
+
+
